@@ -299,26 +299,6 @@ nav a {
     text-align:center;
 }
 
-#contact-us  p {
-    font-size:18px;
-    color:#ffffff;
-    padding-bottom:50px;
-    text-align:center;
-}
-
-.contact-us-container {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    flex-basis:600px;
-}
-
-#contact-us form {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
 #contact-us form button {
     display:flex;
     justify-content:center;
