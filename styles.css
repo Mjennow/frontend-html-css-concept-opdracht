@@ -1,0 +1,346 @@
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --paars:#5722CD;
+    --blauw:#4845E4;
+    --roze:#ED4385;
+    --zwart:#0C0C0C;
+    --lichtpaars:#F2F0FF;
+    --lichtgrijs:#F3F6F9;
+    --grijs:#7A7A7A;
+}
+
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Merriweather', Arial, serif;
+    font-weight:400;
+}
+
+h1 {
+    font-size:50px;
+    line-height:58px;
+    color:#fff;
+}
+
+h3 {
+    color:#5722CD;
+}
+
+
+body {
+    font-family: 'Roboto', Tahoma, sans-serif;
+    font-size: 15px;
+    line-height:20px;
+    font-weight:300;
+    color:#7A7A7A;
+}
+
+a {
+    text-decoration:none;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+
+
+.services {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:1;
+    flex-basis:900px;
+}
+
+
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 1200px;
+    }
+}
+
+.button, button {
+    color:#ffffff;
+    font-size:16px;
+    text-transform:uppercase;
+    background-color:#ED4385;
+    border-radius:50px;
+    padding:20px 80px;
+    margin-top:40px;
+    border:none;
+    box-shadow:0em 5px 10px #5722CD;
+}
+
+.line {
+    border-bottom: 30px solid red;
+    border-right: 100vw solid transparent;
+}
+
+.squiggle {
+    height: 30px;
+    width: 30px;
+    background-color: coral;
+    position: absolute;
+    left: calc(50% - 15px);
+    bottom: 0;
+}
+
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+/* ----------------------- 4.1 Header ---------------------------------------- */
+
+header {
+    display:flex;
+    flex-direction:column;
+    background: linear-gradient(140deg, rgba(72,69,228,1) 35%, rgba(87,34,205,1) 100%);
+    position: relative;
+}
+
+nav {
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    padding:40px 0px;
+}
+
+nav ul  {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-basis:620px;
+    list-style-type:none;
+    text-decoration:none;
+}
+
+nav a {
+
+    font-family:Roboto, Tahoma, sans-serif;
+    font-size:20px;
+    font-weight:300;
+    color:#fff;
+    text-decoration:none;
+
+
+}
+
+.content-container {
+    width: 900px;
+    align-self: center;
+    text-align: center;
+    margin:50px 50px 70px 50px;
+
+}
+
+.content-container p {
+    font-size:22px;
+    color:#ffffff;
+    padding-top:30px;
+
+}
+
+/* ----------------------- 4.2 About us ---------------------------------------- */
+#about-us {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 400;
+    color:#5722CD;
+    line-height:36px;
+}
+
+.container-about-us {
+    width:900px;
+    text-align:center;
+    margin:50px;
+
+}
+
+
+/* ----------------------- 4.3 Case studies---------------------------------------- */
+/*.case-studies::before {*/
+/*    content: "work";*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*    font-family:Roboto, Tahoma, sans-serif;*/
+/*    font-size: 260px;*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    height: 400px;*/
+/*    top: 0;*/
+/*    left:50%; transform: translateX(-50%);*/
+/*    z-index: -1;*/
+/*}*/
+
+#case-studies {
+    background-color:#F2F0FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding:
+    z-index:-3;
+    width:100%;
+}
+
+
+#case-studies article  {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.case-studies-text  {
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:flex-start;
+    height:300px;
+}
+
+.case-studies-text  {
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:flex-start;
+    height:300px;
+}
+#case-studies article:nth-of-type(2n) {
+    flex-direction: row-reverse;
+}
+
+.squiggle-line {
+    height: 0.3em;
+    margin: 1.8em 1em 0em 0em;
+}
+
+/* ----------------------- 4.2 Services ---------------------------------------- */
+
+#cards {
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding:80px 0px;
+}
+
+.card {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    height:340px;
+    flex-basis:340px;
+    flex-shrink:1;
+    flex-grow:1;
+    border:1px solid #5722CD;
+    margin:20px;
+    padding:30px;
+    box-shadow: 0px 8px 15px 2px rgba(0,0,0,0.15);
+}
+
+
+.card h3 { padding:18px 0px; font-size:21px;}
+
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 1200px;
+    }
+}
+
+
+
+/* ----------------------- 4.5 Contact us---------------------------------------- */
+
+#contact-us {
+    width:100%;
+    padding:50px;
+    display:flex;
+    justify-content:center;
+    background-color:#5722CD;
+}
+
+#contact-us h2 {
+    color:#ffffff;
+    padding-bottom:20px;
+    font-size:40px;
+    text-align:center;
+}
+
+#contact-us  p {
+    font-size:18px;
+    color:#ffffff;
+    padding-bottom:50px;
+    text-align:center;
+}
+
+.contact-us-container {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    flex-basis:600px;
+}
+
+#contact-us form {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+#contact-us form button {
+    display:flex;
+    justify-content:center;
+    align-self:center;
+}
+
+
+
+/* ----------------------- 4.6 Footer ---------------------------------------- */
+
+footer {
+    background-color:#0C0C0C;
+    padding:20px 0px;
+}
+
+footer p {
+    font-size:12px;
+    color:#ffffff;
+}
+
+
+
+
+
+
